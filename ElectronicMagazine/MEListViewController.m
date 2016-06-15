@@ -7,8 +7,15 @@
 //
 
 #import "MEListViewController.h"
+#import "MEListTableViewCell.h"
 
-@interface MEListViewController ()
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
+
+@interface MEListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -16,13 +23,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:UIColorFromRGB(0x5856D6),
+       NSFontAttributeName:[UIFont fontWithName:@"Questrial-Regular" size:20]}];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MEListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MEListTableViewCell"];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return tableView.frame.size.height;
 }
 
 /*

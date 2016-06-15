@@ -17,6 +17,10 @@
 		EDCA59A51D11327600B7649D /* MEListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCA59A41D11327600B7649D /* MEListViewController.m */; };
 		EDCA59A81D1132F500B7649D /* METabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCA59A71D1132F500B7649D /* METabBarViewController.m */; };
 		EDCA59AA1D113FD700B7649D /* Questrial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDCA59A91D113FD700B7649D /* Questrial-Regular.ttf */; };
+		EDECCB4B1D11558D002D7330 /* MEListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB4A1D11558D002D7330 /* MEListTableViewCell.m */; };
+		EDECCB541D115986002D7330 /* MERoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB501D115986002D7330 /* MERoundedImageView.m */; };
+		EDECCB561D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EDECCB551D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG */; };
+		EDECCB581D11607F002D7330 /* 2016%2F02%2F10%2F09%2FScreenShot2.6b632.png in Resources */ = {isa = PBXBuildFile; fileRef = EDECCB571D11607F002D7330 /* 2016%2F02%2F10%2F09%2FScreenShot2.6b632.png */; };
 		FC0786DDB1A697475378A85B /* libPods-ElectronicMagazine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336CD1DC15896FF08AE31EF3 /* libPods-ElectronicMagazine.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +44,12 @@
 		EDCA59A61D1132F500B7649D /* METabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = METabBarViewController.h; sourceTree = "<group>"; };
 		EDCA59A71D1132F500B7649D /* METabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = METabBarViewController.m; sourceTree = "<group>"; };
 		EDCA59A91D113FD700B7649D /* Questrial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Questrial-Regular.ttf"; sourceTree = "<group>"; };
+		EDECCB491D11558D002D7330 /* MEListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEListTableViewCell.h; sourceTree = "<group>"; };
+		EDECCB4A1D11558D002D7330 /* MEListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEListTableViewCell.m; sourceTree = "<group>"; };
+		EDECCB4F1D115986002D7330 /* MERoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERoundedImageView.h; sourceTree = "<group>"; };
+		EDECCB501D115986002D7330 /* MERoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERoundedImageView.m; sourceTree = "<group>"; };
+		EDECCB551D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG"; sourceTree = "<group>"; };
+		EDECCB571D11607F002D7330 /* 2016%2F02%2F10%2F09%2FScreenShot2.6b632.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2016%2F02%2F10%2F09%2FScreenShot2.6b632.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,14 +102,14 @@
 		EDCA59851D1112C300B7649D /* ElectronicMagazine */ = {
 			isa = PBXGroup;
 			children = (
+				EDECCB521D115986002D7330 /* Custom UI */,
+				EDECCB441D115173002D7330 /* Resources */,
+				EDECCB421D115154002D7330 /* Tab Bar */,
 				EDCA59A01D1116CE00B7649D /* ElectronicMagazine.entitlements */,
-				EDCA59A91D113FD700B7649D /* Questrial-Regular.ttf */,
+				EDECCB551D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG */,
+				EDECCB571D11607F002D7330 /* 2016%2F02%2F10%2F09%2FScreenShot2.6b632.png */,
 				EDCA59891D1112C300B7649D /* AppDelegate.h */,
 				EDCA598A1D1112C300B7649D /* AppDelegate.m */,
-				EDCA59A31D11327600B7649D /* MEListViewController.h */,
-				EDCA59A41D11327600B7649D /* MEListViewController.m */,
-				EDCA59A61D1132F500B7649D /* METabBarViewController.h */,
-				EDCA59A71D1132F500B7649D /* METabBarViewController.m */,
 				EDCA598F1D1112C300B7649D /* Main.storyboard */,
 				EDCA59951D1112C300B7649D /* Assets.xcassets */,
 				EDCA59971D1112C300B7649D /* LaunchScreen.storyboard */,
@@ -117,6 +127,61 @@
 				EDCA59871D1112C300B7649D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDECCB421D115154002D7330 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				EDCA59A61D1132F500B7649D /* METabBarViewController.h */,
+				EDCA59A71D1132F500B7649D /* METabBarViewController.m */,
+				EDECCB431D11515F002D7330 /* List View */,
+			);
+			name = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		EDECCB431D11515F002D7330 /* List View */ = {
+			isa = PBXGroup;
+			children = (
+				EDCA59A31D11327600B7649D /* MEListViewController.h */,
+				EDCA59A41D11327600B7649D /* MEListViewController.m */,
+				EDECCB451D1151A2002D7330 /* Cell */,
+			);
+			name = "List View";
+			sourceTree = "<group>";
+		};
+		EDECCB441D115173002D7330 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDCA59A91D113FD700B7649D /* Questrial-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EDECCB451D1151A2002D7330 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EDECCB491D11558D002D7330 /* MEListTableViewCell.h */,
+				EDECCB4A1D11558D002D7330 /* MEListTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		EDECCB511D115986002D7330 /* Rounded ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				EDECCB4F1D115986002D7330 /* MERoundedImageView.h */,
+				EDECCB501D115986002D7330 /* MERoundedImageView.m */,
+			);
+			name = "Rounded ImageView";
+			sourceTree = "<group>";
+		};
+		EDECCB521D115986002D7330 /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				EDECCB511D115986002D7330 /* Rounded ImageView */,
+			);
+			name = "Custom UI";
+			path = "../../MAG-E/MAG-E";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +213,7 @@
 		EDCA597B1D1112C300B7649D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ME;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Abbin Varghese";
 				TargetAttributes = {
@@ -190,7 +256,9 @@
 			files = (
 				EDCA59991D1112C300B7649D /* LaunchScreen.storyboard in Resources */,
 				EDCA59A21D1125F200B7649D /* GoogleService-Info.plist in Resources */,
+				EDECCB581D11607F002D7330 /* 2016%2F02%2F10%2F09%2FScreenShot2.6b632.png in Resources */,
 				EDCA59961D1112C300B7649D /* Assets.xcassets in Resources */,
+				EDECCB561D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG in Resources */,
 				EDCA59AA1D113FD700B7649D /* Questrial-Regular.ttf in Resources */,
 				EDCA59911D1112C300B7649D /* Main.storyboard in Resources */,
 			);
@@ -251,11 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDECCB541D115986002D7330 /* MERoundedImageView.m in Sources */,
 				EDCA598B1D1112C300B7649D /* AppDelegate.m in Sources */,
 				EDCA59881D1112C300B7649D /* main.m in Sources */,
 				EDCA59A51D11327600B7649D /* MEListViewController.m in Sources */,
 				EDCA59941D1112C300B7649D /* ElectronicMagazine.xcdatamodeld in Sources */,
 				EDCA59A81D1132F500B7649D /* METabBarViewController.m in Sources */,
+				EDECCB4B1D11558D002D7330 /* MEListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

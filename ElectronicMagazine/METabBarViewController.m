@@ -7,6 +7,11 @@
 //
 
 #import "METabBarViewController.h"
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
 
 @interface METabBarViewController ()
 
@@ -16,24 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIFont *f = [UIFont fontWithName:@"" size:20];
+    [self.tabBar setTintColor:UIColorFromRGB(0x5856D6)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
-    if(item.tag==0){
-        [self.tabBar setTintColor:[UIColor blackColor]];
-    }
-    else if (item.tag == 1){
-        [self.tabBar setTintColor:[UIColor blackColor]];
-    }
-    else{
-        [self.tabBar setTintColor:[UIColor blackColor]];
-    }
 }
 
 /*
