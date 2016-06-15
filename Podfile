@@ -10,5 +10,7 @@ target 'ElectronicMagazine' do
 
 pod 'Firebase'
 pod 'Firebase/Messaging'
-
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'SDWebImage', '~>3.7'
 end

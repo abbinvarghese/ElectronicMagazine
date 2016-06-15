@@ -21,6 +21,11 @@
 		EDECCB541D115986002D7330 /* MERoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB501D115986002D7330 /* MERoundedImageView.m */; };
 		EDECCB561D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EDECCB551D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG */; };
 		EDECCB581D11607F002D7330 /* 2016%2F02%2F10%2F09%2FScreenShot2.6b632.png in Resources */ = {isa = PBXBuildFile; fileRef = EDECCB571D11607F002D7330 /* 2016%2F02%2F10%2F09%2FScreenShot2.6b632.png */; };
+		EDECCB5C1D116EEE002D7330 /* MEApplicationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB5B1D116EEE002D7330 /* MEApplicationHelper.m */; };
+		EDECCB611D116F32002D7330 /* Articles+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB5E1D116F32002D7330 /* Articles+CoreDataProperties.m */; };
+		EDECCB621D116F32002D7330 /* Articles.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB601D116F32002D7330 /* Articles.m */; };
+		EDECCB681D118C71002D7330 /* MEArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB671D118C71002D7330 /* MEArticle.m */; };
+		EDECCB721D11A10D002D7330 /* MEAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB711D11A10D002D7330 /* MEAddViewController.m */; };
 		FC0786DDB1A697475378A85B /* libPods-ElectronicMagazine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336CD1DC15896FF08AE31EF3 /* libPods-ElectronicMagazine.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +55,16 @@
 		EDECCB501D115986002D7330 /* MERoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERoundedImageView.m; sourceTree = "<group>"; };
 		EDECCB551D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG"; sourceTree = "<group>"; };
 		EDECCB571D11607F002D7330 /* 2016%2F02%2F10%2F09%2FScreenShot2.6b632.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2016%2F02%2F10%2F09%2FScreenShot2.6b632.png"; sourceTree = "<group>"; };
+		EDECCB5A1D116EEE002D7330 /* MEApplicationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEApplicationHelper.h; sourceTree = "<group>"; };
+		EDECCB5B1D116EEE002D7330 /* MEApplicationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEApplicationHelper.m; sourceTree = "<group>"; };
+		EDECCB5D1D116F32002D7330 /* Articles+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Articles+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EDECCB5E1D116F32002D7330 /* Articles+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Articles+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EDECCB5F1D116F32002D7330 /* Articles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Articles.h; sourceTree = "<group>"; };
+		EDECCB601D116F32002D7330 /* Articles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Articles.m; sourceTree = "<group>"; };
+		EDECCB661D118C71002D7330 /* MEArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEArticle.h; sourceTree = "<group>"; };
+		EDECCB671D118C71002D7330 /* MEArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEArticle.m; sourceTree = "<group>"; };
+		EDECCB701D11A10D002D7330 /* MEAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAddViewController.h; sourceTree = "<group>"; };
+		EDECCB711D11A10D002D7330 /* MEAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +117,7 @@
 		EDCA59851D1112C300B7649D /* ElectronicMagazine */ = {
 			isa = PBXGroup;
 			children = (
+				EDECCB591D116EDF002D7330 /* Modal Classes */,
 				EDECCB521D115986002D7330 /* Custom UI */,
 				EDECCB441D115173002D7330 /* Resources */,
 				EDECCB421D115154002D7330 /* Tab Bar */,
@@ -144,6 +160,7 @@
 			children = (
 				EDCA59A31D11327600B7649D /* MEListViewController.h */,
 				EDCA59A41D11327600B7649D /* MEListViewController.m */,
+				EDECCB691D119B21002D7330 /* Add New */,
 				EDECCB451D1151A2002D7330 /* Cell */,
 			);
 			name = "List View";
@@ -182,6 +199,38 @@
 			);
 			name = "Custom UI";
 			path = "../../MAG-E/MAG-E";
+			sourceTree = "<group>";
+		};
+		EDECCB591D116EDF002D7330 /* Modal Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EDECCB631D116F38002D7330 /* Core Data */,
+				EDECCB5A1D116EEE002D7330 /* MEApplicationHelper.h */,
+				EDECCB5B1D116EEE002D7330 /* MEApplicationHelper.m */,
+			);
+			name = "Modal Classes";
+			sourceTree = "<group>";
+		};
+		EDECCB631D116F38002D7330 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				EDECCB5D1D116F32002D7330 /* Articles+CoreDataProperties.h */,
+				EDECCB5E1D116F32002D7330 /* Articles+CoreDataProperties.m */,
+				EDECCB5F1D116F32002D7330 /* Articles.h */,
+				EDECCB601D116F32002D7330 /* Articles.m */,
+				EDECCB661D118C71002D7330 /* MEArticle.h */,
+				EDECCB671D118C71002D7330 /* MEArticle.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		EDECCB691D119B21002D7330 /* Add New */ = {
+			isa = PBXGroup;
+			children = (
+				EDECCB701D11A10D002D7330 /* MEAddViewController.h */,
+				EDECCB711D11A10D002D7330 /* MEAddViewController.m */,
+			);
+			name = "Add New";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,11 +369,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDECCB541D115986002D7330 /* MERoundedImageView.m in Sources */,
+				EDECCB681D118C71002D7330 /* MEArticle.m in Sources */,
 				EDCA598B1D1112C300B7649D /* AppDelegate.m in Sources */,
 				EDCA59881D1112C300B7649D /* main.m in Sources */,
 				EDCA59A51D11327600B7649D /* MEListViewController.m in Sources */,
+				EDECCB621D116F32002D7330 /* Articles.m in Sources */,
+				EDECCB721D11A10D002D7330 /* MEAddViewController.m in Sources */,
+				EDECCB611D116F32002D7330 /* Articles+CoreDataProperties.m in Sources */,
 				EDCA59941D1112C300B7649D /* ElectronicMagazine.xcdatamodeld in Sources */,
 				EDCA59A81D1132F500B7649D /* METabBarViewController.m in Sources */,
+				EDECCB5C1D116EEE002D7330 /* MEApplicationHelper.m in Sources */,
 				EDECCB4B1D11558D002D7330 /* MEListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

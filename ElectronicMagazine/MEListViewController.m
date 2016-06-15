@@ -8,6 +8,8 @@
 
 #import "MEListViewController.h"
 #import "MEListTableViewCell.h"
+#import "MEApplicationHelper.h"
+#import "MEAddViewController.h"
 
 #define UIColorFromRGB(rgbValue) \
 [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -16,6 +18,11 @@ blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
 alpha:1.0]
 
 @interface MEListViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (strong, nonatomic) NSArray *articleArray;
+@property (strong, nonatomic) NSArray *subArticleArray;
+@property (weak, nonatomic) IBOutlet UITableView *articleTableView;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -26,7 +33,24 @@ alpha:1.0]
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:UIColorFromRGB(0x5856D6),
        NSFontAttributeName:[UIFont fontWithName:@"Questrial-Regular" size:20]}];
-    // Do any additional setup after loading the view.
+    
+     _refreshControl = [[UIRefreshControl alloc] init];
+    [_refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.articleTableView addSubview:_refreshControl];
+    
+    [[MEApplicationHelper sharedHelper]startListeningToBDChanges:^(NSArray *modifiedArray) {
+        if (_articleArray==nil) {
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                _articleArray = modifiedArray;
+                [_articleTableView reloadData];
+            });
+        }
+        else{
+            _subArticleArray = modifiedArray;
+        }
+
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,11 +59,12 @@ alpha:1.0]
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return _articleArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MEListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MEListTableViewCell"];
+    cell.articleObject = [_articleArray objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -47,14 +72,13 @@ alpha:1.0]
     return tableView.frame.size.height;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)refresh:(UIBarButtonItem *)sender {
+    if (_subArticleArray.count>0) {
+        _articleArray = _subArticleArray;
+    }
+    [_articleTableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
+    [_articleTableView reloadData];
+    [_refreshControl endRefreshing];
 }
-*/
 
 @end
