@@ -26,8 +26,36 @@
 		EDECCB621D116F32002D7330 /* Articles.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB601D116F32002D7330 /* Articles.m */; };
 		EDECCB681D118C71002D7330 /* MEArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB671D118C71002D7330 /* MEArticle.m */; };
 		EDECCB721D11A10D002D7330 /* MEAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB711D11A10D002D7330 /* MEAddViewController.m */; };
+		EDECCB7B1D11AF9D002D7330 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCB7A1D11AF9D002D7330 /* ShareViewController.m */; };
+		EDECCB7E1D11AF9D002D7330 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDECCB7C1D11AF9D002D7330 /* MainInterface.storyboard */; };
+		EDECCB831D11AF9D002D7330 /* ElectronicMagazineShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EDECCB771D11AF9D002D7330 /* ElectronicMagazineShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EDECCB881D11C38C002D7330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCA59951D1112C300B7649D /* Assets.xcassets */; };
 		FC0786DDB1A697475378A85B /* libPods-ElectronicMagazine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336CD1DC15896FF08AE31EF3 /* libPods-ElectronicMagazine.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDECCB801D11AF9D002D7330 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDCA597B1D1112C300B7649D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDECCB761D11AF9D002D7330;
+			remoteInfo = ElectronicMagazineShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EDECCB821D11AF9D002D7330 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EDECCB831D11AF9D002D7330 /* ElectronicMagazineShare.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		336CD1DC15896FF08AE31EF3 /* libPods-ElectronicMagazine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectronicMagazine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +93,12 @@
 		EDECCB671D118C71002D7330 /* MEArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEArticle.m; sourceTree = "<group>"; };
 		EDECCB701D11A10D002D7330 /* MEAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEAddViewController.h; sourceTree = "<group>"; };
 		EDECCB711D11A10D002D7330 /* MEAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEAddViewController.m; sourceTree = "<group>"; };
+		EDECCB771D11AF9D002D7330 /* ElectronicMagazineShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ElectronicMagazineShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDECCB791D11AF9D002D7330 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		EDECCB7A1D11AF9D002D7330 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		EDECCB7D1D11AF9D002D7330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		EDECCB7F1D11AF9D002D7330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDECCB871D11B1AE002D7330 /* ElectronicMagazineShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ElectronicMagazineShare.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +107,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0786DDB1A697475378A85B /* libPods-ElectronicMagazine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDECCB741D11AF9D002D7330 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCA59851D1112C300B7649D /* ElectronicMagazine */,
+				EDECCB781D11AF9D002D7330 /* ElectronicMagazineShare */,
 				EDCA59841D1112C300B7649D /* Products */,
 				42203C615ACB3C713A163FB1 /* Pods */,
 				C3B8AFD962C337CDD275B596 /* Frameworks */,
@@ -110,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCA59831D1112C300B7649D /* ElectronicMagazine.app */,
+				EDECCB771D11AF9D002D7330 /* ElectronicMagazineShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +276,18 @@
 			name = "Add New";
 			sourceTree = "<group>";
 		};
+		EDECCB781D11AF9D002D7330 /* ElectronicMagazineShare */ = {
+			isa = PBXGroup;
+			children = (
+				EDECCB871D11B1AE002D7330 /* ElectronicMagazineShare.entitlements */,
+				EDECCB791D11AF9D002D7330 /* ShareViewController.h */,
+				EDECCB7A1D11AF9D002D7330 /* ShareViewController.m */,
+				EDECCB7C1D11AF9D002D7330 /* MainInterface.storyboard */,
+				EDECCB7F1D11AF9D002D7330 /* Info.plist */,
+			);
+			path = ElectronicMagazineShare;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,15 +301,34 @@
 				EDCA59811D1112C300B7649D /* Resources */,
 				D43E98ECD1D04276F9ADAD31 /* [CP] Embed Pods Frameworks */,
 				5C80572A90958BA7F8926E0E /* [CP] Copy Pods Resources */,
+				EDECCB821D11AF9D002D7330 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EDECCB811D11AF9D002D7330 /* PBXTargetDependency */,
 			);
 			name = ElectronicMagazine;
 			productName = ElectronicMagazine;
 			productReference = EDCA59831D1112C300B7649D /* ElectronicMagazine.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EDECCB761D11AF9D002D7330 /* ElectronicMagazineShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDECCB841D11AF9D002D7330 /* Build configuration list for PBXNativeTarget "ElectronicMagazineShare" */;
+			buildPhases = (
+				EDECCB731D11AF9D002D7330 /* Sources */,
+				EDECCB741D11AF9D002D7330 /* Frameworks */,
+				EDECCB751D11AF9D002D7330 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ElectronicMagazineShare;
+			productName = ElectronicMagazineShare;
+			productReference = EDECCB771D11AF9D002D7330 /* ElectronicMagazineShare.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -278,6 +352,15 @@
 							};
 						};
 					};
+					EDECCB761D11AF9D002D7330 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = BZKHJ5BM3B;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = EDCA597E1D1112C300B7649D /* Build configuration list for PBXProject "ElectronicMagazine" */;
@@ -294,6 +377,7 @@
 			projectRoot = "";
 			targets = (
 				EDCA59821D1112C300B7649D /* ElectronicMagazine */,
+				EDECCB761D11AF9D002D7330 /* ElectronicMagazineShare */,
 			);
 		};
 /* End PBXProject section */
@@ -310,6 +394,15 @@
 				EDECCB561D116039002D7330 /* https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG in Resources */,
 				EDCA59AA1D113FD700B7649D /* Questrial-Regular.ttf in Resources */,
 				EDCA59911D1112C300B7649D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDECCB751D11AF9D002D7330 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDECCB881D11C38C002D7330 /* Assets.xcassets in Resources */,
+				EDECCB7E1D11AF9D002D7330 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +476,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDECCB731D11AF9D002D7330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDECCB7B1D11AF9D002D7330 /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDECCB811D11AF9D002D7330 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDECCB761D11AF9D002D7330 /* ElectronicMagazineShare */;
+			targetProxy = EDECCB801D11AF9D002D7330 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EDCA598F1D1112C300B7649D /* Main.storyboard */ = {
@@ -400,6 +509,14 @@
 				EDCA59981D1112C300B7649D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EDECCB7C1D11AF9D002D7330 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDECCB7D1D11AF9D002D7330 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -523,6 +640,37 @@
 			};
 			name = Release;
 		};
+		EDECCB851D11AF9D002D7330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ElectronicMagazineShare/ElectronicMagazineShare.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ElectronicMagazineShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ThePaadamCompany.ElectronicMagazine.ElectronicMagazineShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "58e10eca-a199-461c-a02b-e1c5f8b1536d";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EDECCB861D11AF9D002D7330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ElectronicMagazineShare/ElectronicMagazineShare.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ElectronicMagazineShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ThePaadamCompany.ElectronicMagazine.ElectronicMagazineShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d1f97bdb-195c-4bae-8143-13f049c54cf9";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -543,6 +691,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EDECCB841D11AF9D002D7330 /* Build configuration list for PBXNativeTarget "ElectronicMagazineShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDECCB851D11AF9D002D7330 /* Debug */,
+				EDECCB861D11AF9D002D7330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

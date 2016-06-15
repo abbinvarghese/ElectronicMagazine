@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "MEApplicationHelper.h"
+
+NSString *const articleForReview = @"articleForReview";
+
 @import Firebase;
 
 @interface AppDelegate ()
@@ -59,7 +63,17 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSUserDefaults *mySharedDefaults = [[NSUserDefaults alloc] initWithSuiteName: @"group.ThePaadamCompany.ElectronicMagazine"];
+        NSMutableArray *array = [NSMutableArray arrayWithArray:[mySharedDefaults objectForKey:articleForReview]];
+        if (array.count>0) {
+            for (NSDictionary *dict in array) {
+                [MEApplicationHelper postArticleForReview:[NSURL URLWithString:[dict objectForKey:@"url"]] withHeading:[dict objectForKey:@"title"]];
+            }
+            [mySharedDefaults removeObjectForKey:articleForReview];
+        }
+    });
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
