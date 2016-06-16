@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
 @property (weak, nonatomic) IBOutlet UIButton *websiteLabel;
 @property (strong, nonatomic) MEArticle *articleObject;
-
+@property (strong, nonatomic) MEArticle *articleObject2;
 
 
 @end

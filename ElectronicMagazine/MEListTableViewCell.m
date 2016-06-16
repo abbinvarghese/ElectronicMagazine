@@ -8,6 +8,7 @@
 
 #import "MEListTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "MEApplicationHelper.h"
 
 @implementation MEListTableViewCell
 
@@ -23,6 +24,8 @@
 }
 
 -(void)setArticleObject:(MEArticle *)articleObject{
+    
+    _articleObject2 = articleObject;
     _authorLabel.text = articleObject.articleAuthor;
     
     NSTimeInterval theTimeInterval = [articleObject.articleTimestamp doubleValue];
@@ -53,6 +56,46 @@
     [_authorPhotoImageView sd_setImageWithURL:[NSURL URLWithString:articleObject.articleAuthorPhotoUrl] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     [_websiteLabel setTitle:articleObject.articleWebsite forState:UIControlStateNormal];
 
+}
+
+- (IBAction)flag:(UIButton *)sender {
+    [MEApplicationHelper flagArticle:_articleObject2];
+}
+
+- (IBAction)share:(UIButton *)sender {
+
+    NSURL *myWebsite = [NSURL URLWithString:_articleObject2.articleWebpageUrl];
+    
+    NSArray *objectsToShare = @[myWebsite];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    
+    NSArray *excludeActivities = @[UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo,
+                                   UIActivityTypePostToTencentWeibo,
+                                   UIActivityTypeOpenInIBooks];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    
+    UITableView *tv = (UITableView *) self.superview.superview;
+    UIViewController *vc = (UITableViewController *) tv.dataSource;
+    
+    [vc presentViewController:activityVC animated:YES completion:nil];
+}
+
+
+- (IBAction)save:(UIButton *)sender {
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth,
+                                                    FIRUser *_Nullable user) {
+        if (user != nil && !user.anonymous) {
+            
+        } else {
+            
+        }
+    }];
 }
 
 @end

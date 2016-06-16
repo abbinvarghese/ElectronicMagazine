@@ -8,8 +8,7 @@
 
 #import "MEApplicationHelper.h"
 #import "AppDelegate.h"
-//#import "Articles.h"
-#import "MEArticle.h"
+
 
 NSString *const articleImageUrl = @"articleImageUrl";
 NSString *const articleHeading = @"articleHeading";
@@ -21,6 +20,7 @@ NSString *const articleWebsite = @"articleWebsite";
 NSString *const articleUID = @"articleuUID";
 NSString *const articleWebpageUrl = @"articleWebpageUrl";
 NSString *const articleAuthorPhotoUrl = @"articleAuthorPhotoUrl";
+NSString *const articleFlag = @"articleFlag";
 
 @implementation MEApplicationHelper
 
@@ -50,7 +50,7 @@ NSString *const articleAuthorPhotoUrl = @"articleAuthorPhotoUrl";
     [recentPostsQuery keepSynced:YES];
     
     [recentPostsQuery observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        
+        NSLog(@"%@",snapshot.value);
         if (![snapshot.value isEqual:[NSNull null]]) {
             dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
             dispatch_async(queue, ^{
@@ -185,6 +185,46 @@ NSString *const articleAuthorPhotoUrl = @"articleAuthorPhotoUrl";
         host = @"";
     }
     return host;
+}
+
++(void)flagArticle:(MEArticle*)article{
+    FIRDatabaseReference *ref = [[[[FIRDatabase database] reference] child:articlePath]child:article.articleuUID];
+
+    [ref runTransactionBlock:^FIRTransactionResult * _Nonnull(FIRMutableData * _Nonnull currentData) {
+        NSMutableDictionary *post = currentData.value;
+        if (!post || [post isEqual:[NSNull null]]) {
+            return [FIRTransactionResult successWithValue:currentData];
+        }
+
+        int starCount = [post[articleFlag] intValue];
+        starCount++;
+        post[articleFlag] = [NSNumber numberWithInt:starCount];
+        
+        // Set value and report transaction success
+        [currentData setValue:post];
+        return [FIRTransactionResult successWithValue:currentData];
+    } andCompletionBlock:^(NSError * _Nullable error,
+                           BOOL committed,
+                           FIRDataSnapshot * _Nullable snapshot) {
+        // Transaction completed
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        else{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Thank you!" message:@"This article has been sent for review and will be removed if it failes" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+            [alert addAction:action];
+            UIWindow *window=[UIApplication sharedApplication].keyWindow;
+            UIViewController *root = [window rootViewController];
+            [root presentViewController:alert animated:YES completion:^{
+                
+            }];
+        }
+    }];
+}
+
++(void)saveArticle:(MEArticle*)article{
+    
 }
 
 @end

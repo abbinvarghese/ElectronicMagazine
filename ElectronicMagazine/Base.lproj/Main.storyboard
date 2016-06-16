@@ -87,7 +87,7 @@
                                                     <rect key="frame" x="81" y="24" width="107" height="16"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Questrial-Regular" family="Questrial" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="https-%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F116276%2FWWDCDevelopers.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="0Ri-XI-Zlz">
@@ -110,6 +110,9 @@
                                                         <constraint firstAttribute="width" constant="44" id="qe3-PY-31L"/>
                                                     </constraints>
                                                     <state key="normal" image="Heart"/>
+                                                    <connections>
+                                                        <action selector="save:" destination="gJp-us-DIc" eventType="touchUpInside" id="xRQ-4f-zvL"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rl-A4-R3a">
                                                     <rect key="frame" x="271" y="446" width="44" height="44"/>
@@ -118,6 +121,9 @@
                                                         <constraint firstAttribute="height" constant="44" id="frU-R9-03K"/>
                                                     </constraints>
                                                     <state key="normal" image="Share"/>
+                                                    <connections>
+                                                        <action selector="share:" destination="gJp-us-DIc" eventType="touchUpInside" id="dZL-st-bAn"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKB-Vk-rNK">
                                                     <rect key="frame" x="219" y="446" width="44" height="44"/>
@@ -126,12 +132,15 @@
                                                         <constraint firstAttribute="height" constant="44" id="iKJ-3f-B9U"/>
                                                     </constraints>
                                                     <state key="normal" image="Flag"/>
+                                                    <connections>
+                                                        <action selector="flag:" destination="gJp-us-DIc" eventType="touchUpInside" id="1Rr-Sc-bZl"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 hr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSh-7i-XCR">
                                                     <rect key="frame" x="81" y="40" width="17" height="11"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Questrial-Regular" family="Questrial" pointSize="10"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w50-BP-yC1">
@@ -140,7 +149,7 @@
                                                     <fontDescription key="fontDescription" name="Questrial-Regular" family="Questrial" pointSize="12"/>
                                                     <inset key="contentEdgeInsets" minX="5" minY="3" maxX="5" maxY="3"/>
                                                     <state key="normal" title="Google">
-                                                        <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -202,7 +211,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Add" id="RT6-Ty-cjj">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="B9v-oO-9n8" kind="presentation" id="bxE-fZ-uQc"/>
                             </connections>

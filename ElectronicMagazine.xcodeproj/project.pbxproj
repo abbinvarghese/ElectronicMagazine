@@ -137,6 +137,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ED83F5551D12E92F00C6D4F8 /* User SignIn-Up */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "User SignIn-Up";
+			sourceTree = "<group>";
+		};
 		EDCA597A1D1112C300B7649D = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +198,7 @@
 		EDECCB421D115154002D7330 /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
+				ED83F5551D12E92F00C6D4F8 /* User SignIn-Up */,
 				EDCA59A61D1132F500B7649D /* METabBarViewController.h */,
 				EDCA59A71D1132F500B7649D /* METabBarViewController.m */,
 				EDECCB431D11515F002D7330 /* List View */,
@@ -699,6 +707,7 @@
 				EDECCB861D11AF9D002D7330 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -32,6 +32,24 @@ NSString *const articleForReview = @"articleForReview";
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth,
+                                                    FIRUser *_Nullable user) {
+        if (user == nil) {
+            [[FIRAuth auth]
+             signInAnonymouslyWithCompletion:^(FIRUser *_Nullable user, NSError *_Nullable error) {
+                 if (error == nil) {
+                     NSLog(@"User Created");
+                 }
+                 else{
+                     NSLog(@"User Error %@",error);
+                 }
+             }];
+        }
+    }];
+    
+
+
+    
     return YES;
 }
 

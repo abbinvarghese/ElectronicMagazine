@@ -94,7 +94,7 @@ NSString *const articleForReview = @"articleForReview";
 }
 
 - (IBAction)post:(UIButton *)sender {
-    if (!_webView.loading) {
+    if (_articleTitle.length>0) {
         if (_webView.URL && _webView.URL.host && _webView.URL.scheme) {
             NSUserDefaults *mySharedDefaults = [[NSUserDefaults alloc] initWithSuiteName: @"group.ThePaadamCompany.ElectronicMagazine"];
             NSMutableArray *array = [NSMutableArray arrayWithArray:[mySharedDefaults objectForKey:articleForReview]];

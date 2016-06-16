@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MEArticle.h"
 @import Firebase;
 
 FOUNDATION_EXPORT NSString *const articleImageUrl;
@@ -19,6 +20,7 @@ FOUNDATION_EXPORT NSString *const ArticlesForReview;
 FOUNDATION_EXPORT NSString *const articleUID;
 FOUNDATION_EXPORT NSString *const articleWebpageUrl;
 FOUNDATION_EXPORT NSString *const articleAuthorPhotoUrl;
+FOUNDATION_EXPORT NSString *const articleFlag;
 
 @interface MEApplicationHelper : NSObject
 
@@ -30,5 +32,7 @@ FOUNDATION_EXPORT NSString *const articleAuthorPhotoUrl;
 -(void)startListeningToBDChanges:(void (^)(NSArray *modifiedArray))success;
 
 +(void)postArticleForReview:(NSURL*)articleUrl withHeading:(NSString*)heading;
+
++(void)flagArticle:(MEArticle*)article;
 
 @end

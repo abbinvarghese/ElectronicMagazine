@@ -76,9 +76,10 @@ alpha:1.0]
     if (_subArticleArray.count>0) {
         _articleArray = _subArticleArray;
     }
+    [_refreshControl endRefreshing];
     [_articleTableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
     [_articleTableView reloadData];
-    [_refreshControl endRefreshing];
+    
 }
 
 @end
