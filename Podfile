@@ -9,8 +9,11 @@ target 'ElectronicMagazine' do
 
 
 pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'Firebase/Storage'
 pod 'Firebase/Messaging'
 pod 'Firebase/Database'
-pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 pod 'SDWebImage', '~>3.7'
+
 end

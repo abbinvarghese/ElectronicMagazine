@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E2B87CB80213EED9CF10BD653CCE52DC09114831",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E2B87CB80213EED9CF10BD653CCE52DC09114831" : 0,
+    "16B15561D951D009B718802B868C9E1A3C04E542" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5782DA79-B436-420B-B54A-C2E1D02BA738",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E2B87CB80213EED9CF10BD653CCE52DC09114831" : "ElectronicMagazine\/",
+    "16B15561D951D009B718802B868C9E1A3C04E542" : "MAG-E\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ElectronicMagazine",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ElectronicMagazine.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/abbinvarghese\/MAG-E.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "16B15561D951D009B718802B868C9E1A3C04E542"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/abbinvarghese\/ElectronicMagazine.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2B87CB80213EED9CF10BD653CCE52DC09114831"
+    }
+  ]
+}

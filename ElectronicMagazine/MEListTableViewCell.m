@@ -9,6 +9,7 @@
 #import "MEListTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MEApplicationHelper.h"
+#import "MEUserSignINUPViewController.h"
 
 @implementation MEListTableViewCell
 
@@ -93,7 +94,10 @@
         if (user != nil && !user.anonymous) {
             
         } else {
-            
+            UITableView *tv = (UITableView *) self.superview.superview;
+            UIViewController *vc = (UITableViewController *) tv.dataSource;
+            MEUserSignINUPViewController *purchaseContr = (MEUserSignINUPViewController *)[vc.storyboard instantiateViewControllerWithIdentifier:@"MEUserSignINUPViewController"];
+            [vc presentViewController:purchaseContr animated:YES completion:nil];
         }
     }];
 }

@@ -23,6 +23,7 @@ NSString *const articleForReview = @"articleForReview";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     [FIRApp configure];
+    [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
     [FIRDatabase database].persistenceEnabled = YES;
     
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
@@ -45,6 +46,11 @@ NSString *const articleForReview = @"articleForReview";
                  }
              }];
         }
+        else{
+            NSLog(@"%@",user.displayName);
+            NSLog(@"%@",user.photoURL);
+            NSLog(@"%@",user.email);
+        }
     }];
     
 
@@ -52,6 +58,15 @@ NSString *const articleForReview = @"articleForReview";
     
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+}
+
 
 -(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
     if (notificationSettings.types != UIUserNotificationTypeNone) {

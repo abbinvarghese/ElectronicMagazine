@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED83F5F71D12F27600C6D4F8 /* MEUserSignINUPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83F5F61D12F27600C6D4F8 /* MEUserSignINUPViewController.m */; };
+		ED83F5FA1D1309F500C6D4F8 /* MESignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83F5F91D1309F500C6D4F8 /* MESignInViewController.m */; };
 		EDCA59881D1112C300B7649D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCA59871D1112C300B7649D /* main.m */; };
 		EDCA598B1D1112C300B7649D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCA598A1D1112C300B7649D /* AppDelegate.m */; };
 		EDCA59911D1112C300B7649D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCA598F1D1112C300B7649D /* Main.storyboard */; };
@@ -61,6 +63,10 @@
 		336CD1DC15896FF08AE31EF3 /* libPods-ElectronicMagazine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectronicMagazine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53D66600F8AE9A920CA8BC6 /* Pods-ElectronicMagazine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectronicMagazine.release.xcconfig"; path = "Pods/Target Support Files/Pods-ElectronicMagazine/Pods-ElectronicMagazine.release.xcconfig"; sourceTree = "<group>"; };
 		A90B175E195E2EC75A867836 /* Pods-ElectronicMagazine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectronicMagazine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ElectronicMagazine/Pods-ElectronicMagazine.debug.xcconfig"; sourceTree = "<group>"; };
+		ED83F5F51D12F27600C6D4F8 /* MEUserSignINUPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEUserSignINUPViewController.h; sourceTree = "<group>"; };
+		ED83F5F61D12F27600C6D4F8 /* MEUserSignINUPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEUserSignINUPViewController.m; sourceTree = "<group>"; };
+		ED83F5F81D1309F500C6D4F8 /* MESignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESignInViewController.h; sourceTree = "<group>"; };
+		ED83F5F91D1309F500C6D4F8 /* MESignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESignInViewController.m; sourceTree = "<group>"; };
 		EDCA59831D1112C300B7649D /* ElectronicMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectronicMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCA59871D1112C300B7649D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDCA59891D1112C300B7649D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +146,10 @@
 		ED83F5551D12E92F00C6D4F8 /* User SignIn-Up */ = {
 			isa = PBXGroup;
 			children = (
+				ED83F5F51D12F27600C6D4F8 /* MEUserSignINUPViewController.h */,
+				ED83F5F61D12F27600C6D4F8 /* MEUserSignINUPViewController.m */,
+				ED83F5F81D1309F500C6D4F8 /* MESignInViewController.h */,
+				ED83F5F91D1309F500C6D4F8 /* MESignInViewController.m */,
 			);
 			name = "User SignIn-Up";
 			sourceTree = "<group>";
@@ -470,12 +480,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDECCB541D115986002D7330 /* MERoundedImageView.m in Sources */,
+				ED83F5F71D12F27600C6D4F8 /* MEUserSignINUPViewController.m in Sources */,
 				EDECCB681D118C71002D7330 /* MEArticle.m in Sources */,
 				EDCA598B1D1112C300B7649D /* AppDelegate.m in Sources */,
 				EDCA59881D1112C300B7649D /* main.m in Sources */,
 				EDCA59A51D11327600B7649D /* MEListViewController.m in Sources */,
 				EDECCB621D116F32002D7330 /* Articles.m in Sources */,
 				EDECCB721D11A10D002D7330 /* MEAddViewController.m in Sources */,
+				ED83F5FA1D1309F500C6D4F8 /* MESignInViewController.m in Sources */,
 				EDECCB611D116F32002D7330 /* Articles+CoreDataProperties.m in Sources */,
 				EDCA59941D1112C300B7649D /* ElectronicMagazine.xcdatamodeld in Sources */,
 				EDCA59A81D1132F500B7649D /* METabBarViewController.m in Sources */,

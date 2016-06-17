@@ -25,6 +25,18 @@ Copyright 2016 Google Inc.
 
 Copyright 2016 Google Inc.
 
+## FirebaseStorage
+
+Copyright 2016 Google Inc.
+
+## GoogleAppUtilities
+
+Copyright 2015 Google Inc.
+
+## GoogleAuthUtilities
+
+Copyright 2015 Google Inc.
+
 ## GoogleIPhoneUtilities
 
 Copyright 2015 Google Inc.
@@ -36,6 +48,10 @@ Copyright 2015 Google Inc.
 ## GoogleNetworkingUtilities
 
 Copyright 2015 Google Inc.
+
+## GoogleSignIn
+
+Copyright 2015 Google Inc. All Rights Reserved.
 
 ## GoogleSymbolUtilities
 
